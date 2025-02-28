@@ -107,7 +107,7 @@ const createKyc = async (req, res) => {
 	}
 
 	try {
-		const userkyc = await KYC.create({...req.body})
+		const userkyc = await KYC.create({...req.body, userId: req.user.userId})
 		return res.status(201).json({success: true, ...userkyc._doc})
 	
 	} catch (error) {

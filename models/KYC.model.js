@@ -6,7 +6,7 @@ const kycSchema = mongoose.Schema({
 		required: [true, 'Please provide firstname'],
 	  },
 	  
-	LastName: {
+	lastName: {
 		type: String,
 		required: [true, 'Please provide lastname'],
 	  },
@@ -24,6 +24,7 @@ const kycSchema = mongoose.Schema({
 	  userId: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User',
+		required: true
 	  }
 	},
 	{ timestamps: true}
