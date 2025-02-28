@@ -7,3 +7,40 @@ Create two more models for
 1. Post (This should have one-to-many relationship with the User model created while registering a User)
 2. KYC (This should have one-to-one relationship with the User model created while registering a User)
 Note: for KYC and POSTS, just have an endpoint that create them and link to user.
+
+# **APIs Endpoints** #
+
+## Registraton ##
+
+```
+POST localhost:5000/api/v1/auth/register 
+
+```
+
+## Login ##
+
+```
+POST localhost:5000/api/v1/auth/login
+
+```
+
+## Deleting A user ##
+
+```
+DELETE localhost:5000/api/v1/auth/delete
+
+```
+
+## createing user kyc ##
+
+```
+POST localhost:5000/api/v1/auth/userkyc
+
+```
+
+## createing a post ##
+
+```
+POST localhost:5000/api/v1/auth/post
+
+```

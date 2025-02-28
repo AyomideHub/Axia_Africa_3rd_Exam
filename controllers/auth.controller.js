@@ -73,8 +73,10 @@ const DeletingAUser = async (req, res) => {
 	if(user){
 		await Post.findOneAndDelete({userId: req.user.userId })
 		await KYC.findOneAndDelete({userId: req.user.userId })
+		res.clearCookie("token")
 		return res.status(200).json({success: true, msg: "user deleted sucessfully"})
 	} else{
+		
 		return res.status(400).json({success: true, msg: "No user Found"})
 	}
 	} catch (error) {
